@@ -17,3 +17,6 @@ _ReSharper*
 out
 *Thumbs.db
 *.bz2
+cef_binary_139.0.38+g7656fe3+chromium-139.0.7258.139_windowsarm64.zip
+cef_binary_139.0.38+g7656fe3+chromium-139.0.7258.139_windows64.zip
+cef_binary_139.0.38+g7656fe3+chromium-139.0.7258.139_windows32.zip

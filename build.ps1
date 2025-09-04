@@ -14,7 +14,7 @@ param(
 	[string] $CefBinaryDir = "../cefsource/chromium/src/cef/binary_distrib/",
 
 	[Parameter(Position = 3)]
-	$CefVersion = "138.0.15+gd0f1f64+chromium-138.0.7204.50",
+	$CefVersion = "139.0.38+g7656fe3+chromium-139.0.7258.139",
 
 	[ValidateSet("tar.bz2","zip","7z")]
 	[Parameter(Position = 4)]
@@ -451,11 +451,11 @@ function Nupkg
 	. $Nuget pack nuget\chromiumembeddedframework.runtime.nuspec -NoPackageAnalysis -Version $CefPackageVersion -Properties 'Configuration=Release;' -OutputDirectory nuget
 
 	# Build sdk
-	$Filename = Resolve-Path ".\nuget\cef.sdk.props"
-	$Text = (Get-Content $Filename) -replace '<CefSdkVer>.*<\/CefSdkVer>', "<CefSdkVer>cef.sdk.$CefPackageVersion</CefSdkVer>"
+	$Filename = Resolve-Path ".\nuget\BTL.cef.sdk.props"
+	$Text = (Get-Content $Filename) -replace '<CefSdkVer>.*<\/CefSdkVer>', "<CefSdkVer>BTL.cef.sdk.$CefPackageVersion</CefSdkVer>"
 	[System.IO.File]::WriteAllLines($Filename, $Text)
 
-	. $Nuget pack nuget\cef.sdk.nuspec -NoPackageAnalysis -Version $CefPackageVersion -OutputDirectory nuget
+	. $Nuget pack nuget\BTL.cef.sdk.nuspec -NoPackageAnalysis -Version $CefPackageVersion -OutputDirectory nuget
 	
 	if ($env:APPVEYOR_REPO_TAG -eq "True")
 	{
