@@ -20,3 +20,7 @@ out
 cef_binary_139.0.38+g7656fe3+chromium-139.0.7258.139_windowsarm64.zip
 cef_binary_139.0.38+g7656fe3+chromium-139.0.7258.139_windows64.zip
 cef_binary_139.0.38+g7656fe3+chromium-139.0.7258.139_windows32.zip
+cef_binary_146.0.12+g6214c8e+chromium-146.0.7680.179_windowsarm64.zip
+cef_binary_146.0.12+g6214c8e+chromium-146.0.7680.179_windows64.zip
+cef_binary_146.0.12+g6214c8e+chromium-146.0.7680.179_windows32.zip
+.vscode/settings.json
